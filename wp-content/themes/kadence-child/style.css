@@ -1,0 +1,77 @@
+/*
+Theme Name: Kadence-Child
+Template: kadence
+Version: 1.0
+*/
+
+html { scroll-behavior: smooth; }
+
+.rotate-15 {
+  transform: rotate(15deg);
+}
+
+/* Because Safari turns numbers into links */
+.white-number a[href^="tel"] {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+/* Home (transparent) BEFORE sticky: keep hamburger white */
+.home .site-main-header-wrap:not(.item-is-stuck) #mobile-toggle,
+.home .site-main-header-wrap:not(.item-is-stuck) #mobile-toggle .kadence-svg-icon {
+  color: #fff;
+  fill: #fff;
+}
+
+/* When header is STICKY: set hamburger to dark color */
+.kadence-sticky-header.item-is-fixed.item-is-stuck #mobile-toggle,
+.kadence-sticky-header.item-is-fixed.item-is-stuck #mobile-toggle .kadence-svg-icon {
+  color: #222 !important;
+  fill: currentColor !important;
+}
+
+/* When header is STICKY: add drop shadow */
+.site-main-header-wrap.kadence-sticky-header.item-is-fixed.item-is-stuck {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* PAGINATION: remove "Pages:" label, center the numbers, add spacing */
+.page-links {
+  font-size: 0;
+  text-align: center;
+  margin-bottom: 50px;
+}
+/* PAGINATION: restore numbers to normal size */
+.page-links a,
+.page-links span {
+  font-size: 1rem;
+}
+
+/* Success message box under the form */
+.kb-form .kb-form-message.kb-form-success {
+    background: #e6f8e9;       /* light green background */
+    color: #1a7f2b;            /* dark green text */
+    border: 1px solid #1a7f2b; /* green border */
+    padding: 12px 16px;        /* padding inside */
+    margin-top: 16px;          /* space above the message */
+    margin-left: 6px;
+    font-size: 0.95rem;
+}
+
+/* Error message box under the form */
+.kb-form .kb-form-message.kb-form-error {
+    background: #fdecea;
+    color: #a12622;
+    border: 1px solid #a12622;
+    padding: 12px 16px;
+    border-radius: 4px;
+    margin-top: 16px;
+    margin-left: 6px;
+    font-size: 0.95rem;
+}
+
+/* Disable the button while the form is submitting */
+.kb-forms-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
